@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+div{
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
