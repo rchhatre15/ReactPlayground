@@ -19,7 +19,19 @@
 
     <script>
       function App() {
-        return React.createElement("header", null, "whassup gang");
+        const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+
+        React.useEffect(function () {
+          setInterval(() => {
+            setTime(new Date().toLocaleTimeString());
+          }, 1000);
+        });
+
+        return React.createElement(
+          "header",
+          null,
+          `Whassup Gang! It's ${time}`
+        );
       }
 
       const root = ReactDOM.createRoot(document.getElementById("root"));
